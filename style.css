@@ -12,9 +12,9 @@ html,body {
     width: 100%; 
 }
 
-h1 {
+h2 {
    position: absolute;
-    top: 180px; left: 72%; 
+    top: 180px; left: 76%; 
     transform: translateX(-50%);
      width: 100%;
       font-weight:bold;
