@@ -7,12 +7,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 8px;
+    overflow-x: hidden;
 }
 
 h1 {
    position: absolute;
-    top: 180px; left: 88%; 
+    top: 180px; left: 72%; 
     transform: translateX(-50%);
      width: 100%;
       font-weight:bold;
@@ -102,8 +103,8 @@ position: absolute;
 top: 0px; 
 left: 50%;
 transform: translateX(-50%); 
-width: 25%;
-margin-top: 275px;
+width: 58%;
+margin-top: 273px;
 transition: 0.3s;
 }
 
