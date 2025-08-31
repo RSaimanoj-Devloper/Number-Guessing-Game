@@ -14,7 +14,7 @@ html,body {
 
 h2 {
    position: absolute;
-    top: 550px; left: 76%; 
+    top: 430px; left: 76%; 
     transform: translateX(-50%);
      width: 100%;
       font-weight:bold;
@@ -189,4 +189,5 @@ pre, code {
 .code-preview {
   border: 2px solid black;
 }
+
 
