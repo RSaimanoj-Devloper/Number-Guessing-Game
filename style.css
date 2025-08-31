@@ -12,9 +12,9 @@ html,body {
     width: 100%; 
 }
 
-h2 {
+h1 {
    position: absolute;
-    top: 430px; left: 76%; 
+    top: 320px; left: 76%; 
     transform: translateX(-50%);
      width: 100%;
       font-weight:bold;
@@ -189,5 +189,6 @@ pre, code {
 .code-preview {
   border: 2px solid black;
 }
+
 
 
