@@ -14,7 +14,7 @@ html,body {
 
 h2 {
    position: absolute;
-    top: 420px; left: 76%; 
+    top: 480px; left: 76%; 
     transform: translateX(-50%);
      width: 100%;
       font-weight:bold;
@@ -87,7 +87,7 @@ input[type="text"],input[type="number"],input[type="email"],textarea {
     max-width: 250px;
     padding: 10px;
     position: absolute;
-    top: 340px;
+    top: 362px;
     margin: 30px 0 10px 0;
     border: 1px solid #ccc;
     border-radius: 10px ;
@@ -169,3 +169,4 @@ footer a {
   0%   { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
+
