@@ -8,13 +8,13 @@ html,body {
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
-    overflow-x: hidden;
+    overflow-x: auto;
     width: 100%; 
 }
 
 h2 {
    position: absolute;
-    top: 480px; left: 76%; 
+    top: 420px; left: 76%; 
     transform: translateX(-50%);
      width: 100%;
       font-weight:bold;
@@ -170,3 +170,22 @@ footer a {
   100% { transform: translateX(-100%); }
 }
 
+pre, code {
+  white-space: pre-wrap;      
+  word-wrap: break-word;      
+  overflow-x: auto;           
+  max-width: 100%;            
+  box-sizing: border-box;     
+  font-family: monospace;
+  font-size: 1em;             
+}
+
+.code-preview {
+  max-width: 600px !important; 
+  overflow-x: auto !important;
+  white-space: pre-wrap !important;
+}
+
+.code-preview {
+  border: 2px solid black;
+}
