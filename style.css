@@ -14,7 +14,7 @@ html,body {
 
 h2 {
    position: absolute;
-    top: 180px; left: 76%; 
+    top: 220px; left: 76%; 
     transform: translateX(-50%);
      width: 100%;
       font-weight:bold;
@@ -88,7 +88,7 @@ input[type="text"],input[type="number"],input[type="email"],textarea {
     max-width: 250px;
     padding: 10px;
     position: absolute;
-    top: 462px;
+    top: 285px;
     margin: 30px 0 10px 0;
     border: 1px solid #ccc;
     border-radius: 10px ;
@@ -118,7 +118,7 @@ button{
     border-radius: 8px;
     font-size: 16px;
     transition: 0.3s;
-    margin-top: 440px;
+    margin-top: 295px;
 }
 
 button:hover, input[type="submit"]:hover {
