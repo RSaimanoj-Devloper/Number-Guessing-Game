@@ -12,6 +12,16 @@ html, body {
     align-items: center;
 }
 
+h2 {
+    position: absolute;
+    top: 30px;
+    left: 76%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-weight: bold;
+    text-decoration-thickness: 5px;
+}
+
 .right-link {
     position: absolute;
     top: 80px;
@@ -179,4 +189,5 @@ pre,code {
     white-space: pre-wrap !important;
     border: 2px solid black;
 }
+
 
