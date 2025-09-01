@@ -7,75 +7,68 @@ html, body {
     width: 100vw;
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+/* Centered container for all game content */
+.container {
+    min-height: calc(100vh - 44px); /* adjust for footer height */
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-h2 {
-    position: absolute;
-    top: 30px;
-    left: 76%;
-    transform: translateX(-50%);
-    width: 100%;
-    font-weight: bold;
-    text-decoration-thickness: 5px;
-}
-
-.right-link {
-    position: absolute;
-    top: 80px;
-    left: 20px;
-}
-
-.right-link a {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-    font-size: 12px;
-    background: #fff;
-    padding: 6px 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.right-link a:hover {
-    background: #3498db;
-    color: white;
-}
-
-.container {
-    flex: 1;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    min-height: calc(100vh - 32px); /* Adjust this value if your footer's height changes */
 }
 
+/* The game content box for neat vertical stacking */
 .box {
-    max-width: 500px;
-    width: 90%;
     background: #fff;
-    padding: 30px;
-    border-radius: 12px;
+    padding: 32px 18px 24px 18px;
+    border-radius: 14px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     text-align: center;
+    max-width: 380px;
+    width: 92vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
     animation: fadeIn 1.2s ease-in;
 }
 
+.game-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.instruction {
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+img {
+    border-radius: 6px;
+    width: 90%;
+    max-width: 260px;
+    margin: 0 0 12px 0;
+}
+
 input[type="text"], input[type="number"], input[type="email"], textarea {
-    width: 100%;
+    width: 96%;
+    max-width: 260px;
     padding: 12px;
-    margin: 10px 0;
+    margin: 0 0 12px 0;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 10px;
     box-sizing: border-box;
     transition: 0.3s;
+    font-size: 1rem;
+    text-align: center;
 }
 
 input:focus, textarea:focus {
@@ -84,51 +77,26 @@ input:focus, textarea:focus {
     box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
 }
 
-input[type="text"],input[type="number"],input[type="email"],textarea {
-    width: 50%;
-    max-width: 250px;
-    padding: 10px;
-    position: absolute;
-    top: 362px;
-    margin: 30px 0 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px ;
-    box-sizing: border-box;
-    transition: 0.3s;
-}
-
-img {
-    border-radius: 5px;
-    position: top;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 58%;
-    margin-top: 273px;
-    transition: 0.3s;
-}
-
 button {
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 10px 34px;
     cursor: pointer;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 19px;
+    font-weight: bold;
     transition: 0.3s;
-    margin-top: 275px;
 }
 
 button:hover, input[type="submit"]:hover {
     background-color: #2980b9;
 }
 
-/* Feedback */
-.success { color: green; font-weight: bold; margin: auto; }
-.error   { color: red; font-weight: bold; margin: auto; }
-.info    { color: #3498db; font-weight: bold; margin: auto; }
+/* Extra feedback styling */
+.success { color: green; font-weight: bold; }
+.error   { color: red; font-weight: bold; }
+.info    { color: #3498db; font-weight: bold; }
 
 @keyframes fadeIn {
     from {opacity: 0; transform: translateY(20px);}
@@ -148,6 +116,7 @@ footer {
     margin: 0;
     box-sizing: border-box;
 }
+
 footer a {
     color: #3498db;
     text-decoration: none;
@@ -173,7 +142,7 @@ footer a {
     100% { transform: translateX(-100%); }
 }
 
-pre,code {
+pre, code {
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-x: auto;
@@ -189,5 +158,3 @@ pre,code {
     white-space: pre-wrap !important;
     border: 2px solid black;
 }
-
-
