@@ -9,9 +9,8 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Centered container for all game content */
 .container {
-    min-height: calc(100vh - 44px); /* adjust for footer height */
+    min-height: calc(100vh - 44px); /* Adjust for footer's height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,28 +18,27 @@ html, body {
     width: 100vw;
 }
 
-/* The game content box for neat vertical stacking */
 .box {
     background: #fff;
-    padding: 32px 18px 24px 18px;
+    padding: 2rem 1rem 1.5rem 1rem;
     border-radius: 14px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     text-align: center;
     max-width: 380px;
-    width: 92vw;
-    margin: 0 auto;
+    width: 95vw;
+    margin: 2% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
     animation: fadeIn 1.2s ease-in;
 }
 
 .game-title {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    margin: 0 0 8px 0;
     color: #222;
+    margin: 0 0 8px 0;
     letter-spacing: 1px;
 }
 
@@ -48,43 +46,37 @@ html, body {
     font-size: 1.1rem;
     color: #222;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 img {
     border-radius: 6px;
     width: 90%;
-    max-width: 260px;
-    margin: 0 0 12px 0;
+    max-width: 220px;
+    margin: 0 0 14px 0;
 }
 
 input[type="text"], input[type="number"], input[type="email"], textarea {
-    width: 96%;
-    max-width: 260px;
+    width: 100%;
+    max-width: 230px;
     padding: 12px;
-    margin: 0 0 12px 0;
+    margin: 0 0 10px 0;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
     transition: 0.3s;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
-}
-
-input:focus, textarea:focus {
-    border-color: #3498db;
-    outline: none;
-    box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
 }
 
 button {
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 10px 34px;
+    padding: 12px 38px;
     cursor: pointer;
     border-radius: 8px;
-    font-size: 19px;
+    font-size: 1.09rem;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -92,11 +84,6 @@ button {
 button:hover, input[type="submit"]:hover {
     background-color: #2980b9;
 }
-
-/* Extra feedback styling */
-.success { color: green; font-weight: bold; }
-.error   { color: red; font-weight: bold; }
-.info    { color: #3498db; font-weight: bold; }
 
 @keyframes fadeIn {
     from {opacity: 0; transform: translateY(20px);}
@@ -108,7 +95,7 @@ footer {
     color: white;
     text-align: center;
     padding: 12px 0;
-    font-size: 8px;
+    font-size: 0.8rem;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -117,44 +104,25 @@ footer {
     box-sizing: border-box;
 }
 
-footer a {
-    color: #3498db;
-    text-decoration: none;
+@media (min-width: 500px) {
+    .box {
+        max-width: 370px;
+        padding: 2rem 2rem 1.5rem 2rem;
+    }
+    .game-title { font-size: 2rem; }
+    .instruction { font-size: 1.2rem; }
+    img { max-width: 280px; }
 }
 
-.scroll-container {
-    width: 100vw;
-    overflow: hidden;
-    background: #333;
-    color: white;
-    padding: 5px 0;
-}
-
-.scroll-container p {
-    display: inline-block;
-    padding-left: 100%;
-    white-space: nowrap;
-    animation: scroll-left 15s linear infinite;
-}
-
-@keyframes scroll-left {
-    0%   { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
-}
-
-pre, code {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-x: auto;
-    max-width: 100%;
-    box-sizing: border-box;
-    font-family: monospace;
-    font-size: 1em;
-}
-
-.code-preview {
-    max-width: 600px !important;
-    overflow-x: auto !important;
-    white-space: pre-wrap !important;
-    border: 2px solid black;
+@media (min-width: 800px) {
+    .container {
+        min-height: calc(100vh - 44px);
+    }
+    .box {
+        max-width: 410px;
+        gap: 22px;
+    }
+    .game-title { font-size: 2.2rem; }
+    .instruction { font-size: 1.3rem; }
+    img { max-width: 320px; }
 }
