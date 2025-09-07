@@ -4,8 +4,8 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
   min-height: 100vh;
   background: linear-gradient(135deg, #b2fefa 0%, #0ed2f7 100%);
   display: flex;
@@ -15,19 +15,20 @@ body {
 .scrolling-banner {
   width: 100vw;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.8);
+  background: #232d3f;
   color: #fff;
   height: 38px;
   display: flex;
   align-items: center;
+  border-bottom: 2px solid #01dff7;
 }
 
 .scrolling-banner .scrolling-text {
   display: inline-block;
   white-space: nowrap;
-  padding-left: 100%;
-  animation: scroll-left 20s linear infinite;
-  font-weight: bold;
+  padding-left: 100vw;
+  animation: scroll-left 18s linear infinite;
+  font-weight: normal;
   letter-spacing: 1px;
   font-size: 1rem;
 }
@@ -43,12 +44,12 @@ body {
 
 .container {
   flex: 1 0 auto;
-  max-width: 400px;
-  margin: 30px auto 0 auto;
-  padding: 15px 10px 20px 10px;
-  background-color: white;
-  box-shadow: 0 0 8px rgba(0,0,0,0.08);
-  border-radius: 14px;
+  max-width: 420px;
+  margin: 38px auto 0 auto;
+  padding: 18px 16px 25px 16px;
+  background: #fff;
+  box-shadow: 0 4px 18px 0 rgba(24,44,97,0.08), 0 0.5px 1.5px 0px #d5f3fb;
+  border-radius: 16px;
   text-align: center;
   position: relative;
 }
@@ -61,92 +62,101 @@ body {
 .visit-link {
   text-decoration: none;
   color: #0077cc;
-  font-weight: bold;
+  font-weight: 600;
   background: #fff;
-  border-radius: 8px;
-  padding: 5px 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  display: inline-block;
+  border-radius: 9px;
+  padding: 6px 14px;
+  box-shadow: 0 2px 6px rgba(49,49,49,0.03);
+  transition: background 0.12s;
+}
+.visit-link:hover {
+  background: #e2eafe;
 }
 
 .game-title {
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 0 0 5px 0;
+  margin: 15px 0 5px 0;
+  font-family: 'Segoe UI Semibold', Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .instructions {
-  font-weight: 600;
-  margin: 0 0 20px 0;
+  font-weight: 500;
+  margin-bottom: 22px;
+  font-size: 1.08rem;
+  letter-spacing: 0.02em;
 }
 
 .game-image {
   max-width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
+  margin-top: 10px;
   border-radius: 10px;
 }
 
 .guess-input {
-  width: 80%;
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
   font-size: 1rem;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  margin-bottom: 13px;
+  border: 1px solid #b8dbe4;
+  border-radius: 7px;
   background: #fff;
 }
 
 .guess-button {
-  width: 80%;
-  padding: 11px;
-  font-size: 1rem;
-  background-color: #22b8cf;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.07rem;
+  background: linear-gradient(90deg, #22b8cf 75%, #39f0d5 100%);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 7px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 8px rgba(49,105,134,0.04);
+  transition: background 0.14s;
 }
-
-.guess-button:hover {
-  background-color: #009ec3;
+.guess-button:hover:enabled {
+  background: linear-gradient(90deg, #12a2b8 80%, #01dff7 100%);
 }
 
 .feedback {
   margin-top: 15px;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 550;
+  min-height: 28px;
 }
 
 footer {
   flex-shrink: 0;
-  width: 100%;
-  margin-top: 30px;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #fff;
+  width: 100vw;
+  margin-top: 32px;
+  padding: 18px 0 13px 0;
   background: #232d3f;
-  line-height: 1.4;
-  padding: 17px 0 13px 0;
-  letter-spacing: 0.04rem;
-  border-top: 2px solid #01dff7;
+  color: #f6fafd;
+  text-align: center;
+  font-size: 0.99rem;
+  letter-spacing: .02em;
+  border-top: 3px solid #01dff7;
+}
+footer p {
+  margin: 7px 0 0 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .container {
     max-width: 98vw;
-    margin: 15px auto 0 auto;
-    padding: 12px 4vw 16px 4vw;
-  }
-  .guess-input,
-  .guess-button {
-    width: 100%;
+    margin: 18px auto 0 auto;
+    padding: 10px 4vw 16px 4vw;
   }
   .game-title {
-    font-size: 1.15rem;
+    font-size: 1.19rem;
   }
   .scrolling-banner .scrolling-text {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
   }
 }
