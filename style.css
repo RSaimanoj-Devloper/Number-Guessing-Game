@@ -17,20 +17,21 @@ body {
   overflow: hidden;
   background: #232d3f;
   color: #fff;
-  height: 38px;
+  height: 26px;
   display: flex;
   align-items: center;
   border-bottom: 2px solid #01dff7;
+  margin-bottom: 0;
+  font-size: 0.95rem;
 }
 
 .scrolling-banner .scrolling-text {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100vw;
-  animation: scroll-left 18s linear infinite;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-size: 1rem;
+  animation: scroll-left 14s linear infinite;
+  font-weight: 500;
+  letter-spacing: .5px;
 }
 
 @keyframes scroll-left {
@@ -45,18 +46,18 @@ body {
 .container {
   flex: 1 0 auto;
   max-width: 420px;
-  margin: 38px auto 0 auto;
-  padding: 18px 16px 25px 16px;
+  margin: 12px auto 0 auto;
+  padding: 16px 10px 20px 10px;
   background: #fff;
-  box-shadow: 0 4px 18px 0 rgba(24,44,97,0.08), 0 0.5px 1.5px 0px #d5f3fb;
-  border-radius: 16px;
+  box-shadow: 0 4px 16px 0 rgba(24,44,97,0.09), 0 0.5px 1.5px 0px #d5f3fb;
+  border-radius: 14px;
   text-align: center;
   position: relative;
 }
 
 .right-link {
   text-align: right;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .visit-link {
@@ -64,10 +65,11 @@ body {
   color: #0077cc;
   font-weight: 600;
   background: #fff;
-  border-radius: 9px;
-  padding: 6px 14px;
-  box-shadow: 0 2px 6px rgba(49,49,49,0.03);
+  border-radius: 7px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 6px rgba(49,49,49,0.02);
   transition: background 0.12s;
+  font-size: 0.97rem;
 }
 .visit-link:hover {
   background: #e2eafe;
@@ -75,24 +77,21 @@ body {
 
 .game-title {
   font-weight: bold;
-  font-size: 1.5rem;
-  margin: 15px 0 5px 0;
-  font-family: 'Segoe UI Semibold', Arial, sans-serif;
+  font-size: 1.35rem;
+  margin: 12px 0 6px 0;
   letter-spacing: 0.01em;
 }
 
 .instructions {
   font-weight: 500;
-  margin-bottom: 22px;
-  font-size: 1.08rem;
-  letter-spacing: 0.02em;
+  margin-bottom: 17px;
+  font-size: 1.03rem;
 }
 
 .game-image {
   max-width: 100%;
   height: auto;
-  margin-bottom: 17px;
-  margin-top: 10px;
+  margin: 0 0 14px 0;
   border-radius: 10px;
 }
 
@@ -100,7 +99,7 @@ body {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
   border: 1px solid #b8dbe4;
   border-radius: 7px;
   background: #fff;
@@ -108,8 +107,8 @@ body {
 
 .guess-button {
   width: 100%;
-  padding: 12px;
-  font-size: 1.07rem;
+  padding: 11px;
+  font-size: 1.04rem;
   background: linear-gradient(90deg, #22b8cf 75%, #39f0d5 100%);
   color: white;
   border: none;
@@ -117,46 +116,56 @@ body {
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.04em;
-  box-shadow: 0 2px 8px rgba(49,105,134,0.04);
-  transition: background 0.14s;
+  box-shadow: 0 2px 8px rgba(49,105,134,0.03);
+  transition: background 0.13s;
 }
 .guess-button:hover:enabled {
   background: linear-gradient(90deg, #12a2b8 80%, #01dff7 100%);
 }
 
 .feedback {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  font-weight: 550;
-  min-height: 28px;
+  margin-top: 13px;
+  font-size: 1.06rem;
+  font-weight: 540;
+  min-height: 25px;
 }
 
 footer {
   flex-shrink: 0;
   width: 100vw;
-  margin-top: 32px;
-  padding: 18px 0 13px 0;
+  margin-top: 15px;
+  padding: 7px 0 8px 0;
   background: #232d3f;
   color: #f6fafd;
   text-align: center;
-  font-size: 0.99rem;
-  letter-spacing: .02em;
-  border-top: 3px solid #01dff7;
+  font-size: 0.84rem;
+  letter-spacing: .01em;
+  border-top: 2px solid #01dff7;
+  line-height: 1.27;
 }
 footer p {
-  margin: 7px 0 0 0;
+  margin: 5px 0 0 0;
+  padding: 0;
 }
 
 @media (max-width: 540px) {
   .container {
     max-width: 98vw;
-    margin: 18px auto 0 auto;
-    padding: 10px 4vw 16px 4vw;
+    margin: 8px auto 0 auto;
+    padding: 6px 3vw 10px 3vw;
   }
   .game-title {
-    font-size: 1.19rem;
+    font-size: 1.09rem;
+  }
+  .scrolling-banner {
+    height: 20px;
+    font-size: 0.81rem;
   }
   .scrolling-banner .scrolling-text {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
+  }
+  footer {
+    font-size: 0.77rem;
+    padding: 4px 0 5px 0;
   }
 }
