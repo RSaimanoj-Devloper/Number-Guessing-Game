@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class NumbersGuessingGame {
+class GuessServlet {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int guess;
@@ -11,7 +11,7 @@ class NumbersGuessingGame {
         guess = sc.nextInt();
         count++;
 
-        while (guess != rand && count < 3) {
+        while (guess != rand && count < 5) {
             System.out.println("Wrong guess! Try again:");
             guess = sc.nextInt();
             count++;
